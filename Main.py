@@ -74,7 +74,7 @@ for aw in aws:
         Img = requests.get(Src2, headers=SubHs, stream=True, proxies=pro)
         Img.raise_for_status()
         Img.encoding = Img.apparent_encoding
-    fn = Title + "-" + str(index) + ".jpg"
+    fn = "Artworks/" + Title + "-" + str(index) + ".jpg"
     with open(fn, 'wb') as f:
         f.write(Img.content)
     print("Save " + fn + " OK")
